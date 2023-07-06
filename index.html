@@ -1,8 +1,167 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  line-height: 1.5em;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+.title{
+  color: white;
+  margin-top: 20px;
+  border-radius: 15px;
+  line-height: 50px;
+  text-align: center;
+  border: 2px solid #19396C;
+  background-color: #084886;
+  background-image: -webkit-linear-gradient(100deg, #19396C 50%, #084886 50%);
+  box-shadow: inset 0 0 10px #19396A;
+}
+
+.progress-section {
+  position: relative;
+  width: 100%;
+  max-width: 875px;
+  border-radius: 15px;
+  background: white;
+  padding: 0.5rem 3rem;
+  margin: 0 auto;
+  border: 2px solid #003A6E;
+  box-shadow: 5px 5px 5px #BCBDBF;
+  background-size: 20px 20px;
+  background-image:
+    linear-gradient(to right, #D1EEF8 1px, transparent 1px),
+    linear-gradient(to bottom, #D1EEF8 1px, transparent 1px);
+}
+
+.task-progress {
+    margin: 1.5rem 0;
+}
+
+.task-progress p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1D2F61;
+}
+
+span {
+    color: #1D2F61;
+}
+
+.progress {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 2px solid #003A6E;
+    box-shadow: 0px 5px 0px #BCBDBF;
+    border-radius: 12px;
+    height: 50px;
+}
+
+.progress::-webkit-progress-bar {
+    background-color: #f0f0f0;
+}
+
+  .progress::-webkit-progress-bar,
+  .progress::-webkit-progress-value {
+    border-radius: 10px;
+}
+
+  .progress::-moz-progress-bar {
+    border-radius: 10px;
+}
+
+.progress0::-webkit-progress-value {
+    background: #4282C9;
+    box-shadow: inset 0 0 10px #98E7F6;
+}
+  
+.progress1::-webkit-progress-value {
+    background: #ffb200;
+    box-shadow: inset 0 0 10px #fffabf;
+}
+
+.progress2::-webkit-progress-value {
+    background: #9e41ea;
+    box-shadow: inset 0 0 10px #d896ff;
+}
+
+.progress3::-webkit-progress-value {
+    background: #589b3f;
+    box-shadow: inset 0 0 10px #d0fca6;
+}
+
+}
+
+.progress-section:before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  border-width: 0 0 35px 35px;
+  border-bottom-right-radius: 10px;
+  border-style: solid;
+  border-color: #82CAE3 transparent;
+}
+
+.progress-section:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-width: 35px 35px 0 0;
+  border-top-left-radius: 10px;
+  border-style: solid;
+  border-color: #82CAE3 transparent;
+}
+
+</style>
+</head>
+
+
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+<div class="progress-section" data-aos="fade-left" data-aos-once="true">
+  <div class="title">Enstars! Reread Progress</div>
+  <div class="task-progress">
+    <p>Main
+      <span>100%</span>
+    </p>
+    <progress class="progress progress0" max="100" value="100"></progress>
+  </div>
+  <div class="task-progress">
+    <p>Event
+      <span>80%</span>
+    </p>
+    <progress class="progress progress1" max="100" value="80"></progress>
+  </div>
+  <div class="task-progress">
+    <p>Scout
+      <span>50%</span>
+    </p>
+    <progress class="progress progress2" max="100" value="50"></progress>
+  </div>
+  <div class="task-progress">
+    <p>Idol
+      <span>75%</span>
+    </p>
+    <progress class="progress progress3" max="100" value="75"></progress>
+  </div>
+</div>
 
 </body>
 </html>
